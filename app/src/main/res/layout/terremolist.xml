@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margine"
+    android:gravity="center"
+    android:layout_height="@dimen/altezzaElemento">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7.5"
+        style="@style/Magnitudo"
+        android:id="@+id/magnitudo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Città che tutti odiano"
+        android:layout_marginLeft="@dimen/margine"
+        android:layout_weight="1"
+        style="@style/TestoInElenco"
+        android:id="@+id/citta"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/1/2017"
+        style="@style/TestoInElenco"
+        android:id="@+id/data"/>
+
+</LinearLayout>
