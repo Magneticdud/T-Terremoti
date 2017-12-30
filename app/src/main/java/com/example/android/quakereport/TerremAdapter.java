@@ -46,7 +46,7 @@ public class TerremAdapter extends ArrayAdapter<Terremoto> {
         cittaTextView.setText(currenTerremoto.getCitta());
 
         TextView dataTextView = (TextView) listItemView.findViewById(R.id.data);
-        dataTextView.setText(String.valueOf(currenTerremoto.getData()));
+        dataTextView.setText(currenTerremoto.getNiceData());
 
         // Return the whole list item layout so that it can be shown in the ListView
         return listItemView;
