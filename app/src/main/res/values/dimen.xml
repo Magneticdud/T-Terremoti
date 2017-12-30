@@ -2,4 +2,5 @@
 <resources>
     <dimen name="altezzaElemento">88dp</dimen>
     <dimen name="margine">16dp</dimen>
+    <dimen name="bordino">8dp</dimen>
 </resources>

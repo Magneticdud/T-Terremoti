@@ -2,7 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:padding="@dimen/margine"
+    android:paddingLeft="@dimen/margine"
+    android:paddingRight="@dimen/margine"
+    android:paddingTop="@dimen/bordino"
+    android:paddingBottom="@dimen/bordino"
     android:gravity="center"
     android:layout_height="@dimen/altezzaElemento">
     <TextView
@@ -11,14 +14,26 @@
         android:text="7.5"
         style="@style/Magnitudo"
         android:id="@+id/magnitudo"/>
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Città che tutti odiano"
-        android:layout_marginLeft="@dimen/margine"
         android:layout_weight="1"
-        style="@style/TestoInElenco"
-        android:id="@+id/citta"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70 km da"
+            android:layout_marginLeft="@dimen/margine"
+            style="@style/TestoDistanza"
+            android:id="@+id/distanza"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Città che tutti odiano"
+            android:layout_marginLeft="@dimen/margine"
+            style="@style/TestoInElenco"
+            android:id="@+id/citta"/>
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

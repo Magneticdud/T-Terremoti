@@ -45,6 +45,9 @@ public class TerremAdapter extends ArrayAdapter<Terremoto> {
         // set this text on the number TextView
         cittaTextView.setText(currenTerremoto.getCitta());
 
+        TextView distanzaTextView = (TextView) listItemView.findViewById(R.id.distanza);
+        distanzaTextView.setText(currenTerremoto.getDistanza());
+
         TextView dataTextView = (TextView) listItemView.findViewById(R.id.data);
         dataTextView.setText(currenTerremoto.getNiceData());
 
