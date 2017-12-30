@@ -9,9 +9,12 @@
     android:gravity="center"
     android:layout_height="@dimen/altezzaElemento">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/cerchiodimen"
+        android:layout_height="@dimen/cerchiodimen"
         android:text="7.5"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:background="@drawable/magnitudo_circle"
         style="@style/Magnitudo"
         android:id="@+id/magnitudo"/>
     <LinearLayout
