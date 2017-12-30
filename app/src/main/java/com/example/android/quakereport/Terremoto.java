@@ -2,6 +2,7 @@ package com.example.android.quakereport;
 
 import android.text.format.DateFormat;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Terremoto {
@@ -28,6 +29,11 @@ public class Terremoto {
     }
 
     public String getNiceData() {
-        return DateFormat.format("hh:mm:ss\ndd/MM/yyyy", new Date(mData)).toString();
+        Date dateObject = new Date(mData);
+
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("hh:mm:ss\ndd MMM yyyy");
+        String dateToDisplay = dateFormatter.format(dateObject);
+
+        return dateToDisplay;
     }
 }
