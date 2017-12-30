@@ -10,10 +10,12 @@ public class Terremoto {
     private String mCitta;
     private String mDistanza;
     private long mData;
+    private String mUrl;
 
-    public Terremoto(double magnitudo,String citta, long data) {
+    public Terremoto(double magnitudo,String citta, long data, String Url) {
         mMagnitudo=magnitudo;
         mData=data;
+        mUrl=Url;
         if (citta.contains(" of ")) {
             String[] splitted = citta.split(" of ");
             mDistanza = splitted[0]+" of";
@@ -39,6 +41,10 @@ public class Terremoto {
 
     public long getData(){
         return mData;
+    }
+
+    public String getUrl(){
+        return mUrl;
     }
 
     public String getNiceData() {
