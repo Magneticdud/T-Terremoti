@@ -16,29 +16,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="TestoInElenco">
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="TestoDistanza">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@color/grigioChiaro</item>
-    </style>
-
-    <style name="DataTerremoto">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="Magnitudo">
-        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

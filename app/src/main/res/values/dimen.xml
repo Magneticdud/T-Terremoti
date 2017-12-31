@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="altezzaElemento">88dp</dimen>
-    <dimen name="margine">16dp</dimen>
-    <dimen name="bordino">8dp</dimen>
-    <dimen name="raggio">18dp</dimen>
-    <dimen name="cerchiodimen">36dp</dimen>
-</resources>
