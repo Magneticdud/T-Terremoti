@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 jsonResponse = makeHttpRequest(url);
             } catch (IOException e) {
-                // TODO Handle the IOException
+                Log.e(LOG_TAG,"Errore facendo la richiesta: "+e);
             }
 
             // Extract relevant fields from the JSON response and create an {@link Event} object
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                     jsonResponse = readFromStream(inputStream);
                 }
             } catch (IOException e) {
-                // TODO: Handle the exception
+                Log.e(LOG_TAG,"Errore scaricando i dati: "+e);
             } finally {
                 if (urlConnection != null) {
                     urlConnection.disconnect();
