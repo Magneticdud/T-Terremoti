@@ -83,7 +83,7 @@ public class TerremAdapter extends ArrayAdapter<Terremoto> {
         //curva che passa dai punti {{0,0.6},{2,0.5},{3,0.4},{4,0.2},{6,0.1},{10,0}}
         // -0.3*log(0.1*magnitudo)
         float[] HSV = new float [3];
-        double H = -0.25*log10(0.1*magnitudo)*360;
+        double H = -0.3*log10(0.1*magnitudo)*360;
         if (H>=0.6*360) {
             //diventa blu
             H = 215;

@@ -15,7 +15,9 @@
  */
 package com.example.android.quakereport;
 
+import android.app.LoaderManager;
 import android.content.Intent;
+import android.content.Loader;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,7 +29,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EarthquakeActivity extends AppCompatActivity {
+public class EarthquakeActivity extends AppCompatActivity
+        implements LoaderManager.LoaderCallbacks<List<Terremoto>> {
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
     private static final String USGS_JSON_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=2&limit=10";
@@ -97,5 +100,19 @@ public class EarthquakeActivity extends AppCompatActivity {
                 mAdapter.addAll(data);
             }
         }
+    }
+    @Override
+    public Loader<List<Terremoto>> onCreateLoader(int i, Bundle bundle) {
+        // TODO: Create a new loader for the given URL
+    }
+
+    @Override
+    public void onLoadFinished(Loader<List<Terremoto>> loader, List<Terremoto> earthquakes) {
+        // TODO: Update the UI with the result
+    }
+
+    @Override
+    public void onLoaderReset(Loader<List<Terremoto>> loader) {
+        // TODO: Loader reset, so we can clear out our existing data.
     }
 }
