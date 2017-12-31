@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** URL for earthquake data from the USGS dataset */
     private static final String USGS_REQUEST_URL =
-            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-01-01&endtime=2016-05-02&minfelt=50&minmagnitude=5";
+            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minfelt=50&minmagnitude=5";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
     //metodo async per la richiesta di rete
     private class EarthquakeAsyncTask extends AsyncTask<String, Void, Event> {
+        @Override
         protected Event doInBackground(String... urls) {
+            // Don't perform the request if there are no URLs, or the first URL is null.
+            if (urls.length < 1 || urls[0] == null) {
+                return null;
+            }
             // Perform the HTTP request for earthquake data and process the response.
             Event result = Utils.fetchEarthquakeData(urls[0]);
             return result;
@@ -64,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
         //eseguito quando finito
         protected void onPostExecute(Event result) {
+            // If there is no result, do nothing.
+            if (result == null) {
+                return;
+            }
             updateUi(result);
         }
     }
