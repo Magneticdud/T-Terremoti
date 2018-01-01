@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">T-Terremoti</string>
     <string name="nearby">Vicino a</string>
+    <string name="empty">Nessun terremoto trovato</string>
 </resources>
