@@ -7,4 +7,8 @@
     <string name="settings">Impostazioni</string>
     <string name="earthquake_settings">Impostazioni sui terremoti</string>
     <string name="settings_min_magnitude_label">Magnitudo minima</string>
+    <string name="settings_order_by_label">Ordina per</string>
+    <string name="settings_order_by_magnitude_label">Magnitudo</string>
+    <string name="settings_order_by_most_recent_label">Più recenti</string>
+    <string name="settings_how_many">Quanti terremoti scarico?</string>
 </resources>
