@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class EarthquakeActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<List<Terremoto>> {
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
-    private static final String USGS_JSON_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=10&limit=10";
+    private static final String USGS_JSON_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=2&limit=10";
 
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -100,6 +101,8 @@ public class EarthquakeActivity extends AppCompatActivity
     public void onLoadFinished(Loader<List<Terremoto>> loader, List<Terremoto> earthquakes) {
         Log.v(LOG_TAG,"onLoadFinished");
         mEmptyTextView.setText(R.string.empty);
+        ProgressBar progress = (ProgressBar) findViewById(R.id.progress);
+        progress.setVisibility(View.GONE);
         // Update the UI with the result
         // Clear the adapter of previous earthquake data
         mAdapter.clear();
