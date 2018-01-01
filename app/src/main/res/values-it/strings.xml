@@ -3,4 +3,5 @@
     <string name="app_name">T-Terremoti</string>
     <string name="nearby">Vicino a</string>
     <string name="empty">Nessun terremoto trovato</string>
+    <string name="no_internet">Non c\'è internet</string>
 </resources>
